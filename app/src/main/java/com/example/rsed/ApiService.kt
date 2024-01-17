@@ -1,10 +1,14 @@
 package com.example.rsed
 
+import okhttp3.MultipartBody
 import retrofit2.Call
+import retrofit2.http.Multipart
 import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.Part
 
 interface ApiService {
+    @Multipart
     @POST("/")
-    fun sendData(@Query("data") data: String): Call<String>
+    fun uploadImage( @Part file: MultipartBody.Part
+    ): Call<String>
 }
