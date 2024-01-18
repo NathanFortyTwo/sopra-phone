@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:text="Semantic Classifier"
+        android:textSize="45sp" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Click on the button to upload image"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/sendRequestButton"
-        android:layout_width="match_parent"
-        android:layout_height="97dp"
-        android:text="Send Request to Server" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Upload" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop" />
 
 </LinearLayout>
